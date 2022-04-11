@@ -1,9 +1,5 @@
 <template>
-  <nav>
-    <router-link v-for="r in $router.options.routes" :key="r.path" :to="r.path">
-      {{ r.name }} |
-    </router-link>
-  </nav>
+  <NavBar />
   <router-view />
 </template>
 
@@ -14,18 +10,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  // padding: 0;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+div.it-dropdown-slot--bottom {
+  left: 0 !important;
+  text-align: left !important;
 }
 </style>
