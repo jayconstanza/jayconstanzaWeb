@@ -59,6 +59,7 @@
     position: fixed;
     width: 100%;
   }
+  // TODO: responsive design w/ media queries
 }
 </style>
 <script lang="ts" setup></script>
