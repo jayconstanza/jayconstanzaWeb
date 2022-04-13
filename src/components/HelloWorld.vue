@@ -1,19 +1,34 @@
 <template>
   <div class="hello">
+    <h1 id="headerTextDeveloper">{{ store.getters.getTranslations.claim }}</h1>
   </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from "vue-class-component";
+<script lang="ts" setup>
+// import { Options, Vue } from "vue-class-component";
+import { defineProps } from "vue";
+import store from "../store";
 
-@Options({
-  props: {
-    msg: String,
-  },
-})
-export default class HelloWorld extends Vue {
-  msg!: string;
-}
+// @Options({
+//   props: {
+//     msg: String,
+//   },
+//   data: {
+//     locale: Ref<Locale>({ es: "" }),
+//   },
+// })
+
+const props = defineProps({
+  msg: { type: String, required: false },
+});
+// const translations: Ref<Translation> = ref({
+//   es: { appTitle: "Soy developer" },
+// });
+
+// export default class HelloWorld extends Vue {
+//   msg!: string;
+//   locale!: Locale;
+// }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

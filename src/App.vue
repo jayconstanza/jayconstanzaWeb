@@ -23,3 +23,11 @@ div.it-dropdown-slot--bottom {
   text-align: left !important;
 }
 </style>
+<script lang="ts" setup>
+import { onBeforeMount } from "vue";
+import store from "./store";
+
+onBeforeMount(() => {
+  store.dispatch({ type: "changeLanguage", language: "es" });
+});
+</script>
