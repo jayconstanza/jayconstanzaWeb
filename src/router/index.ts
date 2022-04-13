@@ -4,7 +4,7 @@ import HomeView from "../views/HomeView.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "hola",
+    name: "hello world!",
     component: HomeView,
   },
   {
