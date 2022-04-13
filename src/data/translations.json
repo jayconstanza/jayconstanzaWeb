@@ -1,10 +1,13 @@
 
 {
   "es": { 
+    "language": "es",
     "appTitle":"¡Hola! Soy Juan Carlos",
     "claim":"Developer y estudiante de Psicología de día, creador de contenido de noche."
   },
   "en": {
-    "appTitle": "Hi! My name is Juan Carlos"
+    "language": "en",
+    "appTitle":"Hi! My name is Juan Carlos",
+    "claim":"Developer, Psychology student, streamer and beatmaker."
   }
 }

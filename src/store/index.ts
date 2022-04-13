@@ -1,20 +1,19 @@
 import { createStore } from "vuex";
-import { TextList } from "@/interfaces/TextList";
+import { ITextList } from "@/interfaces/ITextList";
+import { default as textList } from "@/data/translations.json";
+import { getKeyValue } from "@/utils";
 
+console.log("textlist", textList);
 export default createStore({
   state: {
     language: "",
-    translations: {
-      language: "",
-      claim: "",
-      appTitle: "",
-    },
+    translations: textList.es,
   },
   getters: {
     getLanguage(state): string {
       return state.language;
     },
-    getTranslations(state): TextList {
+    getTranslations(state): ITextList {
       return state.translations;
     },
   },
@@ -26,15 +25,11 @@ export default createStore({
     },
   },
   actions: {
-    changeLanguage: ({ commit, state }, payload): TextList => {
-      //esto seria un call al json correspondiente
-      console.log("state dentro del changeLanguage", state);
-
-      const translations: TextList = {
-        language: payload.language,
-        claim: "claim",
-        appTitle: "appTitle",
-      };
+    changeLanguage: ({ commit }, payload): ITextList => {
+      // we cannot read textList[payload.language] so I created getKeyValue function in @/utils.js
+      // it was throwing this error Element implicitly has an 'any' type because expression of type 'any' can't be used to index type
+      // useful links: https://github.com/microsoft/TypeScript/issues/35859, https://bit.ly/3viMGeG
+      const translations: ITextList = getKeyValue(textList)(payload.language);
       commit({
         type: "SET_TRANSLATIONS",
         translations: translations,
