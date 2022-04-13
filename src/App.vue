@@ -14,6 +14,9 @@
   overflow-y: hidden;
   // padding: 0;
 }
+.it-dropdown-slot {
+  position: fixed !important;
+}
 div.it-dropdown-slot--bottom {
   left: 0 !important;
   text-align: left !important;

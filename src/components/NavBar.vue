@@ -60,11 +60,5 @@
     width: 100%;
   }
 }
-
-.it-dropdown-slot {
-  position: fixed !important;
-}
 </style>
-<script lang="ts" setup>
-import { ref } from "vue";
-</script>
+<script lang="ts" setup></script>
