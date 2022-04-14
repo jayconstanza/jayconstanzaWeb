@@ -1,6 +1,13 @@
 <template>
   <div class="hello">
-    <h1 id="headerTextDeveloper">{{ store.getters.getTranslations.claim }}</h1>
+    <h1 id="headerText">
+      <span class="font900 fontDev">
+        {{ store.getters.getTranslations.developer }}</span
+      >&nbsp;<span class=""> {{ store.getters.getTranslations.atDay }}</span
+      >,<br /><span class="font500 fontBeatmaker bgBlack textWhite">
+        {{ store.getters.getTranslations.contentCreator }}</span
+      >&nbsp;<span class=""> {{ store.getters.getTranslations.atNight }}</span>
+    </h1>
   </div>
 </template>
 
@@ -37,6 +44,19 @@ const props = defineProps({
 
 #headerText {
   @include globalTransform;
+}
+h1 {
+  line-height: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  .fontDev {
+    font-size: 2.5rem;
+  }
+  .fontBeatmaker {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+  }
 }
 h3 {
   margin: 40px 0 0;
