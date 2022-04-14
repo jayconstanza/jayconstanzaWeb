@@ -14,6 +14,7 @@
   </it-dropdown>
 </template>
 <style lang="scss" scoped>
+@import "../styles/mixins.scss";
 .navBar {
   cursor: pointer;
   position: relative;
@@ -42,10 +43,8 @@
       opacity: 0.7;
     }
     a:hover {
-      transform: scale(1.2);
-      transform: rotateX(10deg);
-      transform: rotateZ(5deg);
-      transform: matrix3d(1, 0, 0, 0, 0.1, 1, 2, 0, 0, 0, 1, 0, 2, 2, 0, 1.1);
+      @include globalTransform;
+
       // padding: 0 0 0 7px;
       opacity: 1;
     }
