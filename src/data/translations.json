@@ -3,7 +3,13 @@
   "es": { 
     "language": "es",
     "appTitle":"¡Hola! Soy Juan Carlos",
-    "claim":"Developer y estudiante de Psicología de día, creador de contenido de noche."
+    "developer": "developer",
+    "and": "y",
+    "contentCreator": "creador de contenido",
+    "atDay": "de día",
+    "streamer": "streamer",
+    "beatmaker": "beatmaker",
+    "atNight": "de noche"
   },
   "en": {
     "language": "en",
