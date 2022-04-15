@@ -8,6 +8,7 @@ import Vue3MobileDetection from "vue3-mobile-detection";
 import Equal from "equal-vue";
 import "equal-vue/dist/style.css";
 import "normalize.css/normalize.css";
+import "./index.css";
 
 createApp(App)
   .use(store)
