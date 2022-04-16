@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/",
+    path: "/#sobre-mi",
     name: "sobre mí",
     component: HomeView,
   },
