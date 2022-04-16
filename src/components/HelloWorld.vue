@@ -1,13 +1,36 @@
 <template>
-  <div class="hello">
-    <h1 id="headerText">
-      <span class="font900 fontDev">
-        {{ store.getters.getTranslations.developer }}</span
-      >&nbsp;<span class=""> {{ store.getters.getTranslations.atDay }}</span
-      >,<br /><span class="font500 fontBeatmaker bgBlack textWhite">
-        {{ store.getters.getTranslations.contentCreator }}</span
-      >&nbsp;<span class=""> {{ store.getters.getTranslations.atNight }}</span>
-    </h1>
+  <div id="headerContainer" class="flex flex-wrap">
+    <figure class="basis-full text-center">
+      <img src="../assets/jay.jpg" alt="" class="profilePhoto inline" />
+    </figure>
+    <div
+      id="hello"
+      class="basis-full sm:basis-1/2 text-center sm:text-right px-4 py-4"
+    >
+      <h1 id="headerClaim">
+        <span class="font900 fontDev">
+          {{ store.getters.getTranslations.developer }}</span
+        >&nbsp;<span class=""> {{ store.getters.getTranslations.atDay }}</span
+        >,<br /><span class="font500 fontBeatmaker">
+          {{ store.getters.getTranslations.contentCreator }}</span
+        >&nbsp;<span class=""> {{ store.getters.getTranslations.atNight }}</span
+        ><br />
+        <it-button
+          type="primary"
+          class="text-right"
+          outlined
+          pulse
+          @click="$router.push('/#sobre-mi')"
+          >Cuéntame más</it-button
+        >
+      </h1>
+    </div>
+    <div
+      id="headerDescription"
+      class="basis-full sm:basis-1/2 sm:text-justify text-justify px-10 py-4 tracking-tight"
+    >
+      <p v-html="store.getters.getTranslations.description"></p>
+    </div>
   </div>
 </template>
 
@@ -42,20 +65,32 @@ const props = defineProps({
 <style scoped lang="scss">
 @import "../styles/mixins.scss";
 
-#headerText {
+#headerClaim {
   @include globalTransform;
+  button {
+    float: right;
+  }
+}
+#headerDescription {
+  @include globalTransformReverse;
+}
+.profilePhoto {
+  width: 1rem * 10;
+  height: 1rem * 10;
+  border-radius: 50%;
+  border: 5px solid #000;
+  border-style: inset;
 }
 h1 {
   line-height: 2rem;
-  text-align: left;
   font-size: 1rem;
   .fontDev {
     font-size: 2.5rem;
   }
   .fontBeatmaker {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    letter-spacing: 1.5px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    letter-spacing: 1.25px;
   }
 }
 h3 {
