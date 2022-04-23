@@ -10,7 +10,10 @@
     "streamer": "streamer",
     "beatmaker": "beatmaker",
     "atNight": "de noche",
-    "description": "Soy Juan Carlos, <b>desarrollador de aplicaciones web</b> y <b>estudiante del Grado de Psicología</b>. He participado en proyectos para empresas de distintos países (España, China, EAU...). Actualmente estoy trabajando en mi <b>marca personal</b> (Jay Constanza ®) bajo la que lanzar <b>apps</b> y potenciar la <b>creación de contenido en Twitch, YouTube, Medium...</b>"
+    "attributes": "Características",
+    "workExperience": "Experiencia laboral",
+    "traits": "Traits",
+    "description": "Soy Juan Carlos, <b>desarrollador de aplicaciones web</b> y <b>estudiante del Grado de Psicología</b>. He participado en proyectos para empresas de distintos países (España, China, EAU...). Actualmente estoy trabajando en mi <b>marca personal</b> (Jay Constanza ®) bajo la que lanzar <b>apps</b> y potenciar mi propia <b>creación de contenido en Twitch, YouTube, Medium...</b>. Actualmente me encuentro trabajando en [una importante empresa]. Mi tiempo libre lo dedico a <b>programar un juego</b> <i>open source</i> de mundo abierto (Obsession), a <b>hacer streaming</b>, al <b>beatmaking</b> y a disfrutar de un buen videojuego, siempre café en mano."
   },
   "en": {
     "language": "en",

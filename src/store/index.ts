@@ -3,7 +3,6 @@ import { ITextList } from "@/interfaces/ITextList";
 import { default as textList } from "@/data/translations.json";
 import { getKeyValue } from "@/utils";
 
-console.log("textlist", textList);
 export default createStore({
   state: {
     language: "",
